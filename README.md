@@ -7,7 +7,7 @@ URQL documentation can be found [here](https://github.com/FormidableLabs/urql)
 ## How to start
 
 ```
-git clone git@github.com:datocms/react-urql-demo.git && cd graphcms-examples/current/react-urql-blog
+git clone git@github.com:datocms/react-urql-demo.git && cd react-urql-blog
 yarn && yarn start
 ```
 

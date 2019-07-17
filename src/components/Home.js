@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import gql from "graphql-tag";
 import { useQuery } from "urql";
+import qs from "qs";
 
-const RECIPES_PER_PAGE = 3;
+const RECIPES_PER_PAGE = 2;
 const homeQuery = gql`
   query recipes($first: IntType!, $skip: IntType!) {
     meta: _allRecipesMeta {
       count
     }
-    recipes: allRecipes(orderBy: _createdAt_DESC, first: $first, skip: $skip) {
+    recipes: allRecipes(orderBy: position_ASC, first: $first, skip: $skip) {
       id
       title
       slug
@@ -22,9 +23,26 @@ const homeQuery = gql`
 `;
 
 const Home = props => {
+  const [skip, setSkip] = useState(0);
+
+  useEffect(
+    () => {
+      const skip =
+        parseInt(
+          qs.parse(props.location.search, { ignoreQueryPrefix: true }).skip,
+          10
+        ) || 0;
+      setSkip(skip);
+    },
+    [props.location.search]
+  );
+
   const [res] = useQuery({
     query: homeQuery,
-    variables: { first: RECIPES_PER_PAGE, skip: 0 }
+    variables: {
+      first: RECIPES_PER_PAGE,
+      skip
+    }
   });
 
   if (res.fetching) {
@@ -61,12 +79,9 @@ const Home = props => {
         ))}
       </ul>
       {res.data.meta.count > RECIPES_PER_PAGE && (
-        <a
-          className="Home-button"
-          href={`?skip=${props.match.params.skip || 0 + RECIPES_PER_PAGE}`}
-        >
+        <Link className="Home-button" to={`?skip=${skip + RECIPES_PER_PAGE}`}>
           Show More Recipes
-        </a>
+        </Link>
       )}
     </section>
   );

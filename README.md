@@ -1,4 +1,4 @@
-# DatoCMS blog using React & Urql
+# DatoCMS example blog using React & Urql
 
 ### How to start
 

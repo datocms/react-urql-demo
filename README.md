@@ -1,5 +1,7 @@
 # DatoCMS example blog using React & Urql
 
+This is a Demo project that you can install from your [dashboard](https://dashboard.datocms.com/projects/browse/new) > create new demo project.
+
 ### How to start
 
 Clone this repo
@@ -13,8 +15,6 @@ Create a .env file with your project's read-only api token. Then run
 ```
 yarn && yarn start
 ```
-
-As an alternative, navigate to your DatoCMS dashboard and create a new Demo project!
 
 ### Read more
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import gql from "graphql-tag";
 import { useQuery } from "urql";
 import qs from "qs";
+import { Image } from "react-datocms"
 
 const RECIPES_PER_PAGE = 2;
 const homeQuery = gql`
@@ -16,7 +17,17 @@ const homeQuery = gql`
       slug
       abstract
       coverImage {
-        url
+        responsiveImage(imgixParams: { fit: crop, w: 300, h: 180 }) {
+          aspectRatio
+          width
+          sizes
+          srcSet
+          src
+          webpSrcSet
+          alt
+          title
+          base64
+        }
       }
     }
   }
@@ -59,10 +70,9 @@ const Home = props => {
         {recipes.map(recipe => (
           <li className="Home-li" key={`recipe-${recipe.id}`}>
             <Link to={`/recipes/${recipe.slug}`} className="Home-link">
-              <img
-                alt={recipe.title}
+              <Image
                 className="Home-img"
-                src={recipe.coverImage.url}
+                data={recipe.coverImage.responsiveImage}
               />
               <div>
                 <h3 className="Home-li-title">{recipe.title}</h3>

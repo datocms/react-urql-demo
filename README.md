@@ -1,20 +1,23 @@
 # DatoCMS example blog using React & Urql
 
-This is a Demo project that you can install from your [DatoCMS dashboard](https://dashboard.datocms.com/projects/browse/new) > create new demo project.
+This is a Demo project that you can install from your [DatoCMS dashboard](https://dashboard.datocms.com/projects/browse/categories) > create new demo project.
+
+## Set up your own
+
+By clicking the following button you'll set up a project on DatoCMS with the schema and data that you need to run this example.
+
+[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/deploy?repo=datocms/react-urql-demo)
+
 
 ### How to start
 
-Clone this repo
+Add a `.env` file with your read-only API token, so that React can access the information on your project:
 
-```
-git clone git@github.com:datocms/react-urql-demo.git && cd react-urql-blog
-```
+`echo 'REACT_APP_DATO_API_TOKEN=abc123' >> .env`
 
-Create a .env file with your project's read-only api token. Then run
+then run:
 
-```
-yarn && yarn start
-```
+`yarn && yarn start`
 
 ### Read more
 

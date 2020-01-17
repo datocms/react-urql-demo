@@ -10,7 +10,7 @@ const authorsQuery = gql`
       description
       name
       avatar {
-        responsiveImage(imgixParams: { fit: crop, w: 300, h: 300 }) {
+        responsiveImage(imgixParams: { fit: crop, crop: faces, w: 300, h: 300 }) {
           aspectRatio
           width
           sizes

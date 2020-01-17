@@ -1,7 +1,5 @@
 # DatoCMS example blog using React & Urql
 
-This is a Demo project that you can install from your [DatoCMS dashboard](https://dashboard.datocms.com/projects/browse/categories) > create new demo project.
-
 ## Set up your own
 
 By clicking the following button you'll set up a project on DatoCMS with the schema and data that you need to run this example.

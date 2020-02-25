@@ -1,6 +1,6 @@
 import { createClient } from "urql";
 
-const apiToken = process.env.DATO_API_TOKEN;
+const apiToken = process.env.REACT_APP_DATO_API_TOKEN;
 const headers = {
   Accept: "application/json",
   "Content-Type": "application/json",

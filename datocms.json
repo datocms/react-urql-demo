@@ -4,6 +4,6 @@
   "templateId": "13808",
   "deploymentType": "netlify",
   "netlifyBuildCommand": "yarn build",
-  "datocmsApiTokenEnvName": "DATO_API_TOKEN",
+  "datocmsApiTokenEnvName": "REACT_APP_DATO_API_TOKEN",
   "netlifyBuildDirectory": "build"
 }

@@ -11,7 +11,7 @@ By clicking the following button you'll set up a project on DatoCMS with the sch
 
 Add a `.env` file with your read-only API token, so that React can access the information on your project:
 
-`echo 'REACT_APP_DATO_API_TOKEN=abc123' >> .env`
+`echo 'DATO_API_TOKEN=abc123' >> .env`
 
 then run:
 

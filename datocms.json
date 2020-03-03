@@ -2,7 +2,7 @@
   "name": "React URQL",
   "previewImage": "https://raw.githubusercontent.com/datocms/react-urql-demo/master/screenshot.png",
   "templateId": "13808",
-  "deploymentType": "netlify",
+  "deploymentType": "static",
   "netlifyBuildCommand": "yarn build",
   "datocmsApiTokenEnvName": "REACT_APP_DATO_API_TOKEN",
   "netlifyBuildDirectory": "build"

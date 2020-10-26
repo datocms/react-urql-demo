@@ -5,5 +5,6 @@
   "deploymentType": "static",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "REACT_APP_DATO_API_TOKEN",
-  "buildDirectory": "build"
+  "buildDirectory": "build",
+  "livePreviewUrl": "https://demo-datocms-react-urql.netlify.app/"
 }

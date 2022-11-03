@@ -1,3 +1,5 @@
+# ⛔️DEPRECATED⛔️
+
 # DatoCMS example blog using React & Urql
 
 ## Set up your own
